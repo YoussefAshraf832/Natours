@@ -8,7 +8,8 @@
     "start:node": "nodemon server.js",
     "start:react": "cd public/Natours && npm run dev",
     "start:prod": "set NODE_ENV=production&&nodemon server.js",
-    "debug": "ndb server.js"
+    "debug": "ndb server.js",
+    "build": "cd public/Natours && npm run build"
   },
   "author": "Youssef Ashraf",
   "license": "ISC",
