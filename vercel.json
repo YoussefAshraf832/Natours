@@ -5,12 +5,13 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/$1.js"
+      "dest": "starter/server.js"
     },
     {
       "src": "/(.*)",
       "dest": "public/Natours/dist/index.html"
     }
+
   ]
 
 }
