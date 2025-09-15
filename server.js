@@ -24,7 +24,7 @@ mongoose
   })
   .then(() => console.log('Conected DataBase success'));
 
-const port = process.env.PORT || `https://natours-y.vercel.app/`;
+const port = process.env.PORT || `natours-y-git-master-youssefashraf832s-projects.vercel.app`;
 const server = app.listen(port, () => {
   console.log(`app running on port ${port} ....`);
   console.log(process.env.NODE_ENV);

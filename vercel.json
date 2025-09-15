@@ -1,5 +1,16 @@
 {
   "buildCommand": "cd public/Natours && npm install && npm run build",
   "outputDirectory": "public/Natours/dist",
-  "framework": "vite"
+  "framework": "vite",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "api/$1.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "public/Natours/dist/index.html"
+    }
+  ]
+
 }
