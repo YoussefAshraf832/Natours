@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd public/Natours && npm install && npm run build",
+  "outputDirectory": "public/Natours/dist"
+}
