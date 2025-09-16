@@ -1,3 +1,5 @@
+const { put } = require('@vercel/blob');
+
 const catchAsync = require('../utils/catchAsync');
 // const APIFeatures = require('../utils/apiFeatures');
 const User = require('../models/userModel');
@@ -38,11 +40,23 @@ exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
 
   req.file.filename = `user-${req.user._id}-${Date.now()}.jpeg`;
 
-  await sharp(req.file.buffer)
+  const img = await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat('jpeg')
-    .jpeg({ quality: 90 })
-    .toFile(`public/img/users/${req.file.filename}`);
+    .jpeg({ quality: 90 });
+
+  const blob = await put(req.file.filename, img, {
+    access: 'public',
+    token: process.env.BLOB_READ_WRITE_TOKEN,
+  });
+
+  req.file.filename = blob.url;
+
+  // await sharp(req.file.buffer)
+  //   .resize(500, 500)
+  //   .toFormat('jpeg')
+  //   .jpeg({ quality: 90 })
+  //   .toFile(`public/img/users/${req.file.filename}`);
 
   next();
 });

@@ -4,14 +4,13 @@
   "description": "node-learn",
   "main": "app.js",
   "scripts": {
-    
-  "build": "cd public/Natours && npm run build",
-  "start": "node server.js"
-  
+    "build": "cd public/Natours && npm run build",
+    "start": "node server.js"
   },
   "author": "Youssef Ashraf",
   "license": "ISC",
   "dependencies": {
+    "@vercel/blob": "^1.1.1",
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",

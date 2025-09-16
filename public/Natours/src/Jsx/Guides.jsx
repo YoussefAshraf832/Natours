@@ -4,7 +4,7 @@ function Guides({ guide }) {
   return (
     <div className="overview-box__detail">
       <img
-        src={`${URL_IMAGE}img/users/${guide.photo}`}
+        src={`${URL_IMAGE}img/users/${guide.photo}` || `${guide.photo}`}
         alt={guide.role}
         className="overview-box__img"
       />

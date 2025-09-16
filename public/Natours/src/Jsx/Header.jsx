@@ -49,7 +49,10 @@ function Header() {
             </button>
             <a onClick={handleAccountSetting} className="nav__el">
               <img
-                src={`${URL_IMAGE}img/users/${login?.user?.photo}`}
+                src={
+                  `${URL_IMAGE}img/users/${login?.user?.photo}` ||
+                  `${login?.user?.photo}`
+                }
                 alt="User photo"
                 className="nav__user-img"
               />

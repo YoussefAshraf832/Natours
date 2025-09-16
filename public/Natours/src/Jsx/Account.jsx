@@ -215,7 +215,7 @@ function Account() {
                   src={
                     photo && typeof photo != 'string'
                       ? window.URL.createObjectURL(photo)
-                      : `${URL_IMAGE}img/users/${login?.user?.photo}`
+                      : `${login?.user?.photo}`
                   }
                   alt="User photo"
                 />
