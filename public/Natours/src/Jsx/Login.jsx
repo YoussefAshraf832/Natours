@@ -10,8 +10,8 @@ function Login() {
   const navigate = useNavigate();
 
   // removeCookie('jwt');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('steve@example.com');
+  const [password, setPassword] = useState('test1234');
 
   if (isloginLoad) return <p>Loading</p>;
   if (login) return navigate('/overview');
