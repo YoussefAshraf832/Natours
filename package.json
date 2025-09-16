@@ -4,12 +4,15 @@
   "description": "node-learn",
   "main": "app.js",
   "scripts": {
-    "start": "npm-run-all --parallel start:node start:react",
-    "start:node": "node server.js",
-    "start:react": "cd public/Natours && npm run build",
-    "start:prod": "set NODE_ENV=production&&nodemon server.js",
-    "debug": "ndb server.js",
-    "build": "cd public/Natours && npm run build"
+    
+  "build": "cd public/Natours && npm run build",
+  "start": "node server.js"
+    // "start": "npm-run-all --parallel start:node start:react",
+    // "start:node": "node server.js",
+    // "start:react": "cd public/Natours && npm run build",
+    // "start:prod": "set NODE_ENV=production&&nodemon server.js",
+    // "debug": "ndb server.js",
+    // "build": "cd public/Natours && npm run build"
   },
   "author": "Youssef Ashraf",
   "license": "ISC",
