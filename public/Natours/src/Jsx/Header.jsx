@@ -39,7 +39,7 @@ function Header() {
         </form>
       </nav>
       <div className="header__logo">
-        <img src={`${URL_IMAGE}img/logo-white.png`} alt="Natours logo" />
+        <img src={`../../img/logo-white.png`} alt="Natours logo" />
       </div>
       <nav className="nav nav--user">
         {login && (
