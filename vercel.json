@@ -7,6 +7,6 @@
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "server.js" },
-    { "src": "/(.*)", "dest": "public/Natours/build/index.html" }
+    { "src": "/(.*)", "dest": "public/Natours/dist/index.html" }
   ]
 }
