@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "npm-run-all --parallel start:node start:react",
-    "start:node": "nodemon server.js",
-    "start:react": "cd public/Natours && npm run dev",
+    "start:node": "node server.js",
+    "start:react": "cd public/Natours && npm run build",
     "start:prod": "set NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
     "build": "cd public/Natours && npm run build"
