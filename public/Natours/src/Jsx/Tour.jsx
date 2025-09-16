@@ -60,7 +60,7 @@ function Tour() {
           <div className="header__hero-overlay">&nbsp;</div>
           <img
             className="header__hero-img"
-            src={`${URL_IMAGE}img/tours/${tour?.imageCover}`}
+            src={`../../img/tours/${tour?.imageCover}`}
           />
         </div>
 
@@ -506,18 +506,18 @@ function Tour() {
         <div className="cta">
           <div className="cta__img cta__img--logo">
             <img
-              src={`${URL_IMAGE}img/logo-white.png`}
+              src={`../../img/logo-white.png`}
               alt="Natours logo"
               className=""
             />
           </div>
           <img
-            src={`${URL_IMAGE}img/tours/${tour?.images[1]}`}
+            src={`../../img/tours/${tour?.images[1]}`}
             alt=""
             className="cta__img cta__img--1"
           />
           <img
-            src={`${URL_IMAGE}img/tours/${tour?.images[0]}`}
+            src={`../../img/tours/${tour?.images[0]}`}
             alt=""
             className="cta__img cta__img--2"
           />

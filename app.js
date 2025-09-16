@@ -26,7 +26,17 @@ app.options('*', cors());
 app.use('/img', express.static(path.join(__dirname, 'public', 'img')));
 // app.use(express.static(path.join(__dirname, 'public/Natours')));
 //
-app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      imgSrc: ["'self'", 'data:', 'https://*.vercel-storage.com'],
+      scriptSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      // ممكن تضيف باقي المصادر حسب الحاجة
+    },
+  }),
+);
 
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
