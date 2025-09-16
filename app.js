@@ -24,7 +24,7 @@ app.options('*', cors());
 // app.set('views', path.join(__dirname, 'public/Natours'));
 
 app.use('/img', express.static(path.join(__dirname, 'public', 'img')));
-app.use(express.static(path.join(__dirname, 'public/Natours')));
+// app.use(express.static(path.join(__dirname, 'public/Natours')));
 //
 app.use(helmet());
 
