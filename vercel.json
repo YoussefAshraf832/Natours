@@ -6,6 +6,7 @@
     { "src": "public/Natours/package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "server.js" }
+    { "src": "/(.*)", "dest": "server.js" },
+    { "src": "/(.*)", "dest": "public/Natours/dist/$1" }
   ]
 }
