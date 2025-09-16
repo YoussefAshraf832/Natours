@@ -30,7 +30,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],
-      imgSrc: ["'self'", 'data:', 'https://*.vercel-storage.com'],
+      imgSrc: ["'self'", 'data:', 'blob:', 'https://*.vercel-storage.com'],
       scriptSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
       // ممكن تضيف باقي المصادر حسب الحاجة
