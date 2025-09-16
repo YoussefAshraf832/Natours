@@ -73,7 +73,7 @@ app.use((req, res, next) => {
 //   res.sendFile(path.join(__dirname, 'public/Natours', 'index.html'));
 // });
 
-app.use(express.static(path.join(__dirname, 'public/Natours/dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // أي route غير معروف يروح لـ index.html علشان React يتعامل معاه
 app.get('*', (req, res, next) => {
