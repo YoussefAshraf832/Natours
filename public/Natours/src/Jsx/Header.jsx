@@ -50,8 +50,11 @@ function Header() {
             <a onClick={handleAccountSetting} className="nav__el">
               <img
                 src={
-                  `${URL_IMAGE}img/users/${login?.user?.photo}` ||
-                  `${login?.user?.photo}`
+                  `${login?.user?.photo}`.startsWith(
+                    'https://ukjx80keufh1lgml.public.blob.vercel-storage.com',
+                  )
+                    ? `${login?.user?.photo}`
+                    : `${URL_IMAGE}img/users/${login?.user?.photo}`
                 }
                 alt="User photo"
                 className="nav__user-img"
