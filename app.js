@@ -64,15 +64,22 @@ app.use((req, res, next) => {
 // app.get('/', (req, res) => {
 //   res.status(200).render('index');
 // });
+// app.get('*', (req, res, next) => {
+//   console.log(req.originalUrl);
+//   if (req.originalUrl.startsWith('/api')) {
+//     return next(); // سيب الـ request يكمل للـ API
+//   }
+
+//   res.sendFile(path.join(__dirname, 'public/Natours', 'index.html'));
+// });
+
+app.use(express.static(path.join(__dirname, 'public/Natours/dist')));
+
+// أي route غير معروف يروح لـ index.html علشان React يتعامل معاه
 app.get('*', (req, res, next) => {
-  console.log(req.originalUrl);
-  if (req.originalUrl.startsWith('/api')) {
-    return next(); // سيب الـ request يكمل للـ API
-  }
-
-  res.sendFile(path.join(__dirname, 'public/Natours', 'index.html'));
+  if (req.originalUrl.startsWith('/api')) return next(); // سيب الـ API يشتغل
+  res.sendFile(path.join(__dirname, 'public/Natours/dist', 'index.html'));
 });
-
 /////////////////////////////////////////////////////
 
 app.use('/api/v1/tours', tourRouter);
